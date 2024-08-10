@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ConstraintLayout is used as the root layout -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dispense_activity">
+
+    <!-- EditText for entering a message -->
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter message"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="wrap" />
+
+    <!-- Button for dispensing -->
+    <Button
+        android:id="@+id/btnDispense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dispense"
+        app:layout_constraintEnd_toStartOf="@+id/btnNo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMessage"
+        app:layout_constraintWidth_default="wrap"
+        android:layout_marginTop="16dp"
+        android:onClick="onDispenseClick" />
+
+    <!-- Button for No action -->
+    <Button
+        android:id="@+id/btnNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="No"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnDispense"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMessage"
+        app:layout_constraintWidth_default="wrap"
+        android:layout_marginTop="16dp"
+        android:onClick="onNoClick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
